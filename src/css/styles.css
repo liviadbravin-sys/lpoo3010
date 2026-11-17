@@ -12,7 +12,7 @@
 #container {
     background-image: url('../css/images/background-mobile.png');
     background-size: contain;
-    height: 400vh;
+    height: auto;
 }
 
 a.btn {
