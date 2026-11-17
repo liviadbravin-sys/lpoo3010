@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(../css/variables.css);
+@import url(../css/navbar.css);
+
 *{
     margin: 0;
     padding:0;
@@ -6,21 +9,62 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root{
-    --color-neutral-0:#ffffff;
-    --color-neutral-1:#eee4db;
-    --color-neutral-2:#d4c3b6;
-    --color-neutral-3:#b8a99e;
-    --color-neutral-4:#9e8f85;
-    --color-neutral-5:#7e6e65;
-    --color-neutral-6:#5e4e45;
-    --color-neutral-7:#3e2e25;
-    --color-neutral-8:#1e0e05;
-    --color-neutral-9:#000000;
+#container {
+    background-image: url('../css/images/background-mobile.png');
+    background-size: contain;
+    height: 400vh;
+}
 
-    --color-primary-1:#34815d;
-    --color-primary-2:#2c6e4f;
-    --color-primary-3:#245c42;
+a.btn {
+    text-decoration: none;
+}
 
-    --color-secondary:#f5c518;
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.btn-mobile {
+    font-size: 1.5rem;
+}
+
+.btn-default {
+    background-color: var(--color-primary-1);
+    color: var(--color-neutral-0);
+
+    &:hover {
+        background-color: var(--color-primary-2);
+    }
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    padding-top: clamp(0px, 5vw, 32px);
+
+    .home-image {
+        width: clamp(300px, 50%, 400px);
+    }
+
+    .home-title {
+        color: var(--color-neutral-8);
+        text-align: center;
+        font-size: clamp(3rem, 5vw, 4.3rem);
+        text-transform: uppercase;
+        line-height: 1.2;
+        max-width: 700px;
+
+        span {
+            color: var(--color-primary-1);
+        }
+    }
 }
